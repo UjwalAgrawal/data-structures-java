@@ -22,6 +22,16 @@ class LinkedList {
         this.head = null;
     }
 
+    int len(){
+        Node currentNode = head;
+        int l = 0;
+        while(currentNode!=null){
+            l++;
+            currentNode = currentNode.nextNode;
+        }
+        return l;
+    }
+
     void addNode(Object data){
         if(this.head==null){
             this.head = new Node(data);
@@ -68,6 +78,7 @@ public class SinglyLL {
         }
         System.out.println("Print the list");
         myList.display();
+        System.out.println("Length of the list: " + myList.len());        
 
         sc.close();
 
